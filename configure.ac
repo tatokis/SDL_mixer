@@ -508,6 +508,11 @@ if test x$enable_music_midi = xyes; then
                 MIXER_LIBS="$MIXER_LIBS -lmidi"
                 PC_LIBS="$PC_LIBS -lmidi"
                 ;;
+            *-*-linux*)
+                use_music_midi_native=yes
+                MIXER_LIBS="$MIXER_LIBS -lasound"
+                PC_LIBS="$PC_LIBS -lasound"
+                ;;
         esac
         if test x$use_music_midi_native = xyes; then
             EXTRA_CFLAGS="$EXTRA_CFLAGS -DMUSIC_MID_NATIVE -I\$(srcdir)/src/codecs/native_midi"
