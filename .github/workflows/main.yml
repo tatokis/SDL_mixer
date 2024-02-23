@@ -83,6 +83,7 @@ jobs:
           libvorbis-dev \
           libxmp-dev \
           libwavpack-dev \
+          libasound2-dev \
           ninja-build \
           pkg-config \
           ${NULL+}
